@@ -50,7 +50,7 @@ export default function Main() {
                 color='#66b2ff'
                 fontSize={{xs: 25, md: 40}}
             >
-                Julien W. AWONGA
+                Julien W. AWONGA (JWA)
             </Typography>
             <Typing />
             <Box
