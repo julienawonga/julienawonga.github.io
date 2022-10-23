@@ -2,7 +2,6 @@ import { Box, Link, Typography } from '@mui/material'
 import React from 'react'
 import Typing from './Typing'
 import frontxs from './images/font.svg'
-import Welcom from './Welcom'
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -13,6 +12,28 @@ import Css from './App.css';
 
 
 export default function Main() {
+    
+    const links = document.querySelectorAll(".nav__link");
+    const light = document.querySelector(".nav__light");
+
+    function moveLight({ offsetLeft, offsetWidth }) {
+        light.style.left = `${offsetLeft - offsetWidth / 4}px`;
+      }
+      
+      function activeLink(linkActive) {
+        links.forEach((link) => {
+          link.classList.remove("active");
+          linkActive.classList.add("active");
+        });
+      }
+      
+      links.forEach((link) => {
+        link.addEventListener("click", (event) => {
+          moveLight(event.target);
+          activeLink(link);
+        });
+      });
+
   return (
     <Box
         as="main"
@@ -23,34 +44,27 @@ export default function Main() {
         alignItems='center'
         bgcolor='#001e3c'
     >
-        <Box
-            as="nav"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-        >
-        <nav class="nav">
-            <ul class="nav__links">
-                <li class="nav__link active">
-                    <a href="#"><i class="bx bx-home-alt-2"></i></a>
-                </li>
-                <li class="nav__link">
-                    <a href="#"><i class="bx bx-heart"></i></a>
-                </li>
-                <li class="nav__link">
-                    <a href="#"><i class="bx bx-plus-circle"></i></a>
-                </li>
-                <li class="nav__link">
-                    <a href="#"><i class="bx bx-user"></i></a>
-                </li>
-                <li class="nav__link">
-                    <a href="#"><i class="bx bx-bell"></i></a>
-                </li>
+    <nav class="nav">
+        <ul class="nav__links">
+            <li class="nav__link active">
+                <a href="#"><i class="bx bx-home-alt-2"></i></a>
+            </li>
+            <li class="nav__link">
+                <a href="#"><i class="bx bx-heart"></i></a>
+            </li>
+            <li class="nav__link">
+                <a href="#"><i class="bx bx-plus-circle"></i></a>
+            </li>
+            <li class="nav__link">
+                <a href="#"><i class="bx bx-user"></i></a>
+            </li>
+            <li class="nav__link">
+                <a href="#"><i class="bx bx-bell"></i></a>
+            </li>
 
-                <div class="nav__light"></div>
-            </ul>
-        </nav>
-        </Box>
+            <div class="nav__light"></div>
+        </ul>
+    </nav>
 
         <Box
             as='div'

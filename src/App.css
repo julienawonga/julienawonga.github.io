@@ -6,6 +6,16 @@
   list-style: none;
 }
 
+:root {
+  --tab-color: #210f5a;
+  --white-color: #fff;
+  --home-icon-color: #00f7ff;
+  --heart-icon-color: #ff0000;
+  --plus-icon-color: #adff2f;
+  --user-icon-color: #ee82ee;
+  --bell-icon-color: #ffff00;
+}
+
 body{
   font-family:  'Yeseva One', cursive;
 }
@@ -16,15 +26,7 @@ body{
 .MuiTypography-h2:hover {
   color: #ff0075;
 }
-:root {
-  --tab-color: #191919;
-  --white-color: #fff;
-  --home-icon-color: #00f7ff;
-  --heart-icon-color: #ff0000;
-  --plus-icon-color: #adff2f;
-  --user-icon-color: #ee82ee;
-  --bell-icon-color: #ffff00;
-}
+
 
 
 /* body {
