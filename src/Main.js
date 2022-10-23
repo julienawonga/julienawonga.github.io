@@ -12,7 +12,6 @@ import Css from './App.css';
 
 
 export default function Main() {
-    
     const links = document.querySelectorAll(".nav__link");
     const light = document.querySelector(".nav__light");
 
