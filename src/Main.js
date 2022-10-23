@@ -23,6 +23,34 @@ export default function Main() {
         alignItems='center'
         bgcolor='#001e3c'
     >
+        <Box
+            as="nav"
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+        >
+        <nav class="nav">
+            <ul class="nav__links">
+                <li class="nav__link active">
+                    <a href="#"><i class="bx bx-home-alt-2"></i></a>
+                </li>
+                <li class="nav__link">
+                    <a href="#"><i class="bx bx-heart"></i></a>
+                </li>
+                <li class="nav__link">
+                    <a href="#"><i class="bx bx-plus-circle"></i></a>
+                </li>
+                <li class="nav__link">
+                    <a href="#"><i class="bx bx-user"></i></a>
+                </li>
+                <li class="nav__link">
+                    <a href="#"><i class="bx bx-bell"></i></a>
+                </li>
+
+                <div class="nav__light"></div>
+            </ul>
+        </nav>
+        </Box>
 
         <Box
             as='div'
@@ -80,7 +108,7 @@ export default function Main() {
                      sx={{ color: '#66b2ff', fontSize:{xs: 40, md: 60}, paddingLeft: {xs: 1, md: 3}  }}
                  />
                 </Link>
-                <Link href='https://linkedin.com/julienawon'underline='none'>
+                <Link href='https://linkedin.com/in/julienawon'underline='none'>
                     <LinkedInIcon
                   
                      sx={{ color: '#66b2ff', fontSize:{xs: 40, md: 60}, paddingLeft: {xs: 1, md: 3}  }}
