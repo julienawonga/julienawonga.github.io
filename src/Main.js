@@ -20,10 +20,9 @@ export default function Main() {
         ref.current.style.left = `${offsetLeft - offsetWidth / 4}px`;
     }
     function activeLink(linkActive) {
-        ref_links.current.forEach((link) => {
-            console.log(link);
-        });
-        
+        Array.from(ref_links.current.children).forEach(link => {
+            link.classList.remove("active");
+        })
        linkActive.classList.add('active');
     }
     const handlClick = (e) => {
