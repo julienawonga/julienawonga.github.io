@@ -9,30 +9,27 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Css from './App.css';
-
+import navJs from './navJs';
 
 export default function Main() {
-    const links = document.querySelectorAll(".nav__link");
-    const light = document.querySelector(".nav__light");
+
+    const ref = React.useRef(null);
+    const ref_links = React.useRef(null);
 
     function moveLight({ offsetLeft, offsetWidth }) {
-        light.style.left = `${offsetLeft - offsetWidth / 4}px`;
-      }
-      
-      function activeLink(linkActive) {
-        links.forEach((link) => {
-          link.classList.remove("active");
-          linkActive.classList.add("active");
+        ref.current.style.left = `${offsetLeft - offsetWidth / 4}px`;
+    }
+    function activeLink(linkActive) {
+        ref_links.current.forEach((link) => {
+            console.log(link);
         });
-      }
-      
-      links.forEach((link) => {
-        link.addEventListener("click", (event) => {
-          moveLight(event.target);
-          activeLink(link);
-        });
-      });
-
+        
+       linkActive.classList.add('active');
+    }
+    const handlClick = (e) => {
+        moveLight(e.target);
+        activeLink(e.target.parentElement.parentElement);
+    }
   return (
     <Box
         as="main"
@@ -43,25 +40,24 @@ export default function Main() {
         alignItems='center'
         bgcolor='#001e3c'
     >
-    <nav class="nav">
-        <ul class="nav__links">
-            <li class="nav__link active">
-                <a href="#"><i class="bx bx-home-alt-2"></i></a>
+    <nav className="nav">
+        <ul className="nav__links" ref={ref_links} onClick={handlClick}>
+            <li className="nav__link active">
+                <a href="#"><i className="bx bx-home-alt-2"></i></a>
             </li>
-            <li class="nav__link">
-                <a href="#"><i class="bx bx-heart"></i></a>
+            <li className="nav__link">
+                <a href="#"><i className="bx bx-heart"></i></a>
             </li>
-            <li class="nav__link">
-                <a href="#"><i class="bx bx-plus-circle"></i></a>
+            <li className="nav__link">
+                <a href="#"><i className="bx bx-plus-circle"></i></a>
             </li>
-            <li class="nav__link">
-                <a href="#"><i class="bx bx-user"></i></a>
+            <li className="nav__link">
+                <a href="#"><i className="bx bx-user"></i></a>
             </li>
-            <li class="nav__link">
-                <a href="#"><i class="bx bx-bell"></i></a>
+            <li className="nav__link">
+                <a href="#"><i className="bx bx-bell"></i></a>
             </li>
-
-            <div class="nav__light"></div>
+            <div className="nav__light" ref={ref}></div>
         </ul>
     </nav>
 
