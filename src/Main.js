@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import { Box, Link, Typography } from '@mui/material'
 import React from 'react'
 import Typing from './Typing'
@@ -9,7 +10,6 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import Css from './App.css';
-import navJs from './navJs';
 
 export default function Main() {
 
