@@ -1,66 +1,20 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+import React from 'react';
+
 import { Box, Link, Typography } from '@mui/material'
-import React from 'react'
-import Typing from './Typing'
-import frontxs from './images/font.svg'
 
 import GitHubIcon from '@mui/icons-material/GitHub';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import Css from './App.css';
 
-export default function Main() {
+import Typing from './Typing'
+import frontxs from './images/font.svg'
 
-    const ref = React.useRef(null);
-    const ref_links = React.useRef(null);
-
-    function moveLight({ offsetLeft, offsetWidth }) {
-        ref.current.style.left = `${offsetLeft - offsetWidth / 4}px`;
-    }
-    function activeLink(linkActive) {
-        Array.from(ref_links.current.children).forEach(link => {
-            link.classList.remove("active");
-        })
-       linkActive.classList.add('active');
-    }
-    const handlClick = (e) => {
-        moveLight(e.target);
-        activeLink(e.target.parentElement.parentElement);
-    }
-  return (
-    <Box
-        as="main"
-        height="100vh"
-        display='flex'
-        flexDirection='column'
-        justifyContent= {{xs:'flex-start', md:'center'}}
-        alignItems='center'
-        bgcolor='#001e3c'
-    >
-    <nav className="nav">
-        <ul className="nav__links" ref={ref_links} onClick={handlClick}>
-            <li className="nav__link active">
-                <a href="#"><i className="bx bx-home-alt-2"></i></a>
-            </li>
-            <li className="nav__link">
-                <a href="#"><i className="bx bx-heart"></i></a>
-            </li>
-            <li className="nav__link">
-                <a href="#"><i className="bx bx-plus-circle"></i></a>
-            </li>
-            <li className="nav__link">
-                <a href="#"><i className="bx bx-user"></i></a>
-            </li>
-            <li className="nav__link">
-                <a href="#"><i className="bx bx-bell"></i></a>
-            </li>
-            <div className="nav__light" ref={ref}></div>
-        </ul>
-    </nav>
-
-        <Box
+const Home = () => {
+    return (
+        <>
+             <Box
             as='div'
             paddingTop={{xs: 10, md: 0}}
         >
@@ -124,6 +78,8 @@ export default function Main() {
                 </Link>
             </Box>
         </Box>
-    </Box>
-  )
+        </>
+    );
 }
+
+export default Home;

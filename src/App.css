@@ -11,7 +11,7 @@
   --white-color: #fff;
   --home-icon-color: #00f7ff;
   --heart-icon-color: #ff0000;
-  --plus-icon-color: #adff2f;
+  --library-icon-color: #adff2f;
   --user-icon-color: #ee82ee;
   --bell-icon-color: #ffff00;
 }
@@ -29,13 +29,6 @@ body{
 
 
 
-/* body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background: #000000;
-} */
 
 li {
   display: inline-block;
@@ -122,14 +115,14 @@ li {
   background-color: var(--heart-icon-color);
 }
 
-.nav__link.active a .bx-plus-circle {
-  color: var(--plus-icon-color);
-  text-shadow: 0 0 15px var(--plus-icon-color), 0 0 30px var(--plus-icon-color),
-    0 0 45px var(--plus-icon-color), 0 0 60px var(--plus-icon-color);
+.nav__link.active a .bx-library {
+  color: var(--library-icon-color);
+  text-shadow: 0 0 15px var(--library-icon-color), 0 0 30px var(--library-icon-color),
+    0 0 45px var(--library-icon-color), 0 0 60px var(--library-icon-color);
 }
 
 .nav__link:nth-child(3).active ~ .nav__light {
-  background-color: var(--plus-icon-color);
+  background-color: var(--library-icon-color);
 }
 
 .nav__link.active a .bx-user {
