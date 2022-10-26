@@ -7,6 +7,8 @@ import Home from './Home'
 import Css from './App.css';
 import About from './About';
 import Projects from './Projects';
+import Contact from './Contact';
+import Skills from './Skills';
 
 export default function Main() {
 
@@ -37,6 +39,12 @@ export default function Main() {
                 break;
             case 'bx-library':
                 setCurrent(Projects);
+                break;
+            case 'bx-grid':
+                setCurrent(Skills);
+                break;
+            case 'bx-mail-send':
+                setCurrent(Contact);
                 break;
             default:
                 setCurrent(Home);

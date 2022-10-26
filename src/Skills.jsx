@@ -1,14 +1,14 @@
 import React from 'react';
 import { Typography } from '@mui/material';
-const Projects = () => {
+const Skills = () => {
     return (
         <Typography
             variant="h2"
             color='#66b2ff'
         >
-            Projects
+            Skills
         </Typography>
     );
 }
 
-export default Projects;
+export default Skills;
