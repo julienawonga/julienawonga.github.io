@@ -6,6 +6,7 @@ import Home from './Home'
 
 import Css from './App.css';
 import About from './About';
+import Projects from './Projects';
 
 export default function Main() {
 
@@ -34,6 +35,9 @@ export default function Main() {
             case 'bx-home-alt-2':
                 setCurrent(Home);
                 break;
+            case 'bx-library':
+                setCurrent(Projects);
+                break;
             default:
                 setCurrent(Home);
         }
@@ -54,16 +58,16 @@ export default function Main() {
                     <a href="#"><i className="bx bx-home-alt-2"></i></a>
                 </li>
                 <li className="nav__link">
-                    <a href="#"><i className="bx bx-heart"></i></a>
+                    <a href="#"><i className="bx bx-user"></i></a>
+                </li>
+                <li className="nav__link">
+                    <a href="#"><i className="bx bx-grid"></i></a>
                 </li>
                 <li className="nav__link">
                     <a href="#"><i className="bx bx-library"></i></a>
                 </li>
                 <li className="nav__link">
-                    <a href="#"><i className="bx bx-user"></i></a>
-                </li>
-                <li className="nav__link">
-                    <a href="#"><i className="bx bx-bell"></i></a>
+                    <a href="#"><i className="bx bx-mail-send"></i></a>
                 </li>
                 <div className="nav__light" ref={ref}></div>
             </ul>

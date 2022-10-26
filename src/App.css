@@ -9,11 +9,11 @@
 :root {
   --tab-color: #001e3c;
   --white-color: #fff;
-  --home-icon-color: #00f7ff;
-  --heart-icon-color: #ff0000;
-  --library-icon-color: #adff2f;
-  --user-icon-color: #ee82ee;
-  --bell-icon-color: #ffff00;
+  --home-icon-color: #ff0000;
+  --grid-icon-color: #02eeff;
+  --library-icon-color: #ff8a04;
+  --user-icon-color: #f705ff;
+  --mail-send-icon-color: #ffff00;
 }
 
 body{
@@ -104,15 +104,15 @@ li {
   background-color: var(--home-icon-color);
 }
 
-.nav__link.active a .bx-heart {
-  color: var(--heart-icon-color);
-  text-shadow: 0 0 15px var(--heart-icon-color),
-    0 0 30px var(--heart-icon-color), 0 0 45px var(--heart-icon-color),
-    0 0 60px var(--heart-icon-color);
+.nav__link.active a .bx-grid {
+  color: var(--grid-icon-color);
+  text-shadow: 0 0 15px var(--grid-icon-color),
+    0 0 30px var(--grid-icon-color), 0 0 45px var(--grid-icon-color),
+    0 0 60px var(--grid-icon-color);
 }
 
-.nav__link:nth-child(2).active ~ .nav__light {
-  background-color: var(--heart-icon-color);
+.nav__link:nth-child(3).active ~ .nav__light {
+  background-color: var(--grid-icon-color);
 }
 
 .nav__link.active a .bx-library {
@@ -121,7 +121,7 @@ li {
     0 0 45px var(--library-icon-color), 0 0 60px var(--library-icon-color);
 }
 
-.nav__link:nth-child(3).active ~ .nav__light {
+.nav__link:nth-child(4).active ~ .nav__light {
   background-color: var(--library-icon-color);
 }
 
@@ -131,16 +131,16 @@ li {
     0 0 45px var(--user-icon-color), 0 0 60px var(--user-icon-color);
 }
 
-.nav__link:nth-child(4).active ~ .nav__light {
+.nav__link:nth-child(2).active ~ .nav__light {
   background-color: var(--user-icon-color);
 }
 
-.nav__link.active a .bx-bell {
-  color: var(--bell-icon-color);
-  text-shadow: 0 0 15px var(--bell-icon-color), 0 0 30px var(--bell-icon-color),
-    0 0 45px var(--bell-icon-color), 0 0 60px var(--bell-icon-color);
+.nav__link.active a .bx-mail-send {
+  color: var(--mail-send-icon-color);
+  text-shadow: 0 0 15px var(--mail-send-icon-color), 0 0 30px var(--mail-send-icon-color),
+    0 0 45px var(--mail-send-icon-color), 0 0 60px var(--mail-send-icon-color);
 }
 
 .nav__link:nth-child(5).active ~ .nav__light {
-  background-color: var(--bell-icon-color);
+  background-color: var(--mail-send-icon-color);
 }
