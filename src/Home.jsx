@@ -15,8 +15,8 @@ const Home = () => {
     return (
         <>
              <Box
-            as='div'
-            paddingTop={{xs: 10, md: 0}}
+                as='div'
+                paddingTop={{xs: 10, md: 0}}
         >
             
             <img 

@@ -1,13 +1,21 @@
 import React from 'react';
-import { Typography } from '@mui/material';
+import { Typography, Box } from '@mui/material';
 const Projects = () => {
     return (
-        <Typography
-            variant="h2"
-            color='#66b2ff'
+        <Box
+            as='div'
+            paddingTop={{xs: 10, md: 0}}
         >
-            Projects
-        </Typography>
+
+            <Typography
+                variant="h2"
+                color='#66b2ff'
+                paddingTop={{xs: 10, md: 0}}
+            >
+                Projects
+            </Typography>
+        </Box>
+
     );
 }
 
