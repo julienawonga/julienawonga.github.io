@@ -151,9 +151,8 @@ li {
     width: 15em;
   }
 }
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 376px) {
   .nav{
-    top: 40px;
-    width: 15em;
+    width: 10em;
   }
 }
