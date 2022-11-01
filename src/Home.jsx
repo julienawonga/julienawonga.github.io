@@ -70,12 +70,7 @@ const Home = () => {
                      sx={{ color: '#66b2ff', fontSize:{xs: 40, md: 60}, paddingLeft: {xs: 1, md: 3}  }}
                  />
                 </Link>
-                <Link href='https://linkedin.com/in/julienawon'underline='none'>
-                    <LinkedInIcon
-                  
-                     sx={{ color: '#66b2ff', fontSize:{xs: 40, md: 60}, paddingLeft: {xs: 1, md: 3}  }}
-                 />
-                </Link>
+                
             </Box>
         </Box>
         </>
