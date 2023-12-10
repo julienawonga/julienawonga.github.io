@@ -1,12 +1,12 @@
 :root {
-	--background-color: #0c04a6; /* light mode background color */
-	--text-color: #4700ab; /* light mode text color */
+	--background-color: rgb(0, 30, 60);
+	--text-color: #fff;
 }
 
 @media (prefers-color-scheme: dark) {
 	:root {
-		--background-color: #444; 
-		--text-color: #ddd;
+		--background-color: rgb(0, 30, 60); 
+		--text-color: #fff;
 	}
 }
 
@@ -37,11 +37,11 @@ header{
 
 header .logo{
 	color: #fff;
-	font-weight: 700;
+	font-weight: 500;
 	text-decoration: none;
-	font-size: 2em;
+	font-size: 1.5em;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1.5px;
 }
 
 header nav{
@@ -64,8 +64,11 @@ header nav ul li a{
 	transition: 0.5s;
 }
 
-header nav ul li a.active, header nav ul li a:hover{
-	color: #111;
+header nav ul li a.active, header nav ul li a:hover {
+	color: #3498db;
+	transform: scale(1.5); 
+	transition: transform 0.3s ease-in-out; 
+
 }
 .logo {
 	font-size: 2em;
