@@ -11,16 +11,34 @@
     <title>Julien Awon'ga | Data Expert</title>
 
     <!-- Add some coding keywords below, Ex: (javascript, yourusername, etc) -->
-    <meta name="keywords" content="julien awonga, data engineer, machine learning engineer, cloud architect, aws architect, azure architect, gcp , big data" />
+    <meta
+      name="keywords"
+      content="julien awonga, data engineer, machine learning engineer, cloud architect, aws architect, azure architect, gcp , big data"
+    />
 
     <!-- Improve your SEO by adding a small descrption of you -->
     <meta name="description" content="Julien awonga |  Data engineer" />
 
     <!-- Add a your png Logo to the assets folder and change the href attr accordingly  -->
-    <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" />
+    <!-- <link rel="icon" type="image/png" href="./assets/devfolio-logo.png" /> -->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/favicons/site.webmanifest" />
 
     <!-- Add your primary-theme color for the value of content -->
-    <meta name="theme-color" content="#36d1dc" />
+    <meta name="theme-color" content="#5E17EB" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
@@ -80,13 +98,13 @@
       src="https://www.googletagmanager.com/gtag/js?id=UA-122228201-4"
     ></script>
     <script>
-      window.dataLayer = window.dataLayer || []
+      window.dataLayer = window.dataLayer || [];
       function gtag() {
-        dataLayer.push(arguments)
+        dataLayer.push(arguments);
       }
-      gtag("js", new Date())
+      gtag("js", new Date());
 
-      gtag("config", "UA-122228201-4")
+      gtag("config", "UA-122228201-4");
     </script>
     <!-- End of Google Analytics -->
   </head>
@@ -112,6 +130,9 @@
             <a href="#contact" class="nav-menu__link">Blog</a>
           </div>
           <div class="nav-menu__item">
+            <a href="#talks" class="nav-menu__link">Talks</a>
+          </div>
+          <div class="nav-menu__item">
             <a href="#contact" class="nav-menu__link">Contact</a>
           </div>
         </div>
@@ -122,7 +143,8 @@
     <div id="hero">
       <section class="container">
         <h1 class="hero-title">
-          Hi, my name is <span class="text-color-main name">Julien AWON'GA</span>
+          Hi, my name is
+          <span class="text-color-main name">Julien AWON'GA</span>
           <br />
           I'm the Unknown Developer.
         </h1>
@@ -189,13 +211,6 @@
                 sint saepe nostrum! Enim, perferendis.
               </p>
               <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
                 <a href="#" target="_blank" class="cta-btn text-color-main"
                   >Source Code</a
                 >
@@ -229,13 +244,6 @@
                 sint saepe nostrum! Enim, perferendis.
               </p>
               <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
                 <a href="#" target="_blank" class="cta-btn text-color-main"
                   >Source Code</a
                 >
@@ -269,13 +277,6 @@
                 sint saepe nostrum! Enim, perferendis.
               </p>
               <div class="project-wrapper__text-btns">
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="cta-btn cta-btn--hero cta-btn--projects"
-                  >See Live</a
-                >
                 <a href="#" target="_blank" class="cta-btn text-color-main"
                   >Source Code</a
                 >
@@ -297,6 +298,18 @@
             </div>
           </article>
           <!-- /END Project -->
+
+          <!-- View more on github button-->
+          <div class="project-wrapper__btn"></div>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="cta-btn cta-btn--hero"
+          >
+            <i class="fa-solid fa-external-link"></i>
+            View More on Github
+          </a>
         </div>
       </div>
     </section>
@@ -307,8 +320,10 @@
       <div class="container">
         <h2 class="section-title">Contact</h2>
         <div class="contact-wrapper">
-          <p class="contact-wrapper__text">[Put your call to action here]</p>
-          <a href="#" class="cta-btn cta-btn--resume">Call to Action</a>
+          <p class="contact-wrapper__text">julienawon@gmail.com</p>
+          <a href="mailto:julienawon@gmail.com" class="cta-btn cta-btn--resume"
+            >Send me an email</a
+          >
         </div>
       </div>
     </section>
@@ -376,8 +391,40 @@
     </footer>
     <!-- END Footer Section -->
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
     <script>
-      document.getElementById("year").textContent = new Date().getFullYear()
+      const progressCircle = document.querySelector(".autoplay-progress svg");
+      const progressContent = document.querySelector(".autoplay-progress span");
+      var swiper = new Swiper(".project-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        on: {
+          autoplayTimeLeft(s, time, progress) {
+            progressCircle.style.setProperty("--progress", 1 - progress);
+            progressContent.textContent = `${Math.ceil(time / 1000)}s`;
+          },
+        },
+      });
+    </script>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
     <script src="./javascript/vanilla-tilt.min.js"></script>
     <script type="text/javascript" src="./javascript/valtilt.js"></script>
